@@ -36,7 +36,6 @@ namespace MonsterLibrary
             BlockChance = 10;
             BlockAmount = 10;
             Steal = 20;
-
         }
 
         //METHODS

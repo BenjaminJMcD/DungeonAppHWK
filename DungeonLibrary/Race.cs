@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Race
+    public enum Race
     {
+        Hobbits,
+        Human,
+        Elf,
+        Dwarf,
+        WhiteWizard,
+        BrownWizard,
+
     }
+
+
+
 }

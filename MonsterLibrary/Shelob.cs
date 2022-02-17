@@ -10,11 +10,34 @@ namespace MonsterLibrary
     public class Shelob:Monster
     {
         //FIELDS
-        //Special Attributes: 30% Chance Disappear. Sneak Attack at Encounter (-10 Life)
+        //Special Attributes: 40% chance attack again
+        //Only occurs with path 1
 
         //PROPERTIES
 
+        public int MultiAttack { get; set; }
+
         //CONSTRUCTORS
+
+        public Shelob(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, int multiAttack)
+    : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount)
+        {
+            MultiAttack = multiAttack;
+        }
+
+        public Shelob()
+        {
+            Name = "Shelob";
+            Description = ""; //TO DO - SHELOB DESCRIPTION
+            MaxLife = 50;
+            Life = 50;
+            MaxDamage = 10;
+            MinDamage = 1;
+            HitChance = 60;
+            BlockChance = 20;
+            BlockAmount = 10;
+            MultiAttack = 25;
+        }
 
         //METHODS
     }

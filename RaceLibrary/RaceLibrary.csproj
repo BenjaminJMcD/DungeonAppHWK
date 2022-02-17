@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CF98CDD-5552-4865-859E-66B1D32A0B0A}</ProjectGuid>
+    <ProjectGuid>{59922728-47BE-42BA-9FDB-8713C93D2ADE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MonsterLibrary</RootNamespace>
-    <AssemblyName>MonsterLibrary</AssemblyName>
+    <RootNamespace>RaceLibrary</RootNamespace>
+    <AssemblyName>RaceLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MouthOfSauron.cs" />
-    <Compile Include="Olog-Hai.cs" />
-    <Compile Include="Orc.cs" />
+    <Compile Include="BrownWizard.cs" />
+    <Compile Include="Dwarf.cs" />
+    <Compile Include="Elf.cs" />
+    <Compile Include="Hobbit.cs" />
+    <Compile Include="Human.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SauronNecromancyForm.cs" />
-    <Compile Include="Shelob.cs" />
-    <Compile Include="Uruk-hai.cs" />
-    <Compile Include="Wraith.cs" />
+    <Compile Include="WhiteWizard.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DungeonLibrary\DungeonLibrary.csproj">
