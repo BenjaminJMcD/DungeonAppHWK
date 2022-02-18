@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{522BFB95-E785-449C-A6B0-70A02A357178}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Dungeon</RootNamespace>
-    <AssemblyName>Dungeon</AssemblyName>
+    <ProjectGuid>{A75DCC77-125D-4E70-B71E-93F0CE0FAEED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeaponsLibrary</RootNamespace>
+    <AssemblyName>WeaponsLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,28 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Anduril.cs" />
+    <Compile Include="Axe.cs" />
+    <Compile Include="Broadsword.cs" />
+    <Compile Include="DwarvenAxe.cs" />
+    <Compile Include="ElvishDagger.cs" />
+    <Compile Include="Galadhrim.cs" />
+    <Compile Include="GildedAxe.cs" />
+    <Compile Include="GildedBlade.cs" />
+    <Compile Include="OrcArmor.cs" />
+    <Compile Include="TwistedStaff.cs" />
+    <Compile Include="WhiteStaff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DungeonLibrary\DungeonLibrary.csproj">
       <Project>{bd3d5f11-d6eb-44f7-9c0e-56c91d5a4c35}</Project>
       <Name>DungeonLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonsterLibrary\MonsterLibrary.csproj">
-      <Project>{3cf98cdd-5552-4865-859e-66b1d32a0b0a}</Project>
-      <Name>MonsterLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RaceLibrary\RaceLibrary.csproj">
-      <Project>{59922728-47be-42ba-9fdb-8713c93d2ade}</Project>
-      <Name>RaceLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WeaponsLibrary\WeaponsLibrary.csproj">
-      <Project>{a75dcc77-125d-4e70-b71e-93f0ce0faeed}</Project>
-      <Name>WeaponsLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,11 +16,11 @@ namespace DungeonLibrary
 
         public Race CharacterRace { get; set; }
 
-        public Weapon EquippedWeapon { get; set; }
+        public WeaponsArmor EquippedWeapon { get; set; }
 
         //Constuctor
 
-        public Player(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, Weapon equippedWeapon)
+        public Player(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon)
         {
             Name = name;
             Description = description;

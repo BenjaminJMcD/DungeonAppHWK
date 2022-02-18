@@ -18,7 +18,7 @@ namespace RaceLibrary
 
         //CONSTRUCTORS
 
-        public WhiteWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, Weapon equippedWeapon, int blindingAura)
+        public WhiteWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon, int blindingAura)
 : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon)
         {
             BlindingAura = blindingAura;
@@ -31,7 +31,7 @@ namespace RaceLibrary
             MaxLife = 100;
             Life = 100;
             MaxDamage = 40;
-            MinDamage = 30;
+            MinDamage = 20;
             HitChance = 70;
             BlockChance = 40;
             BlockAmount = 20;

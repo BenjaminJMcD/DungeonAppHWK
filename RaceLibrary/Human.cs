@@ -19,7 +19,7 @@ namespace RaceLibrary
 
         //CONSTRUCTORS
 
-        public Human(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, Weapon equippedWeapon, int Parry)
+        public Human(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon, int Parry)
         : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon)
         {
             Parry = parry;

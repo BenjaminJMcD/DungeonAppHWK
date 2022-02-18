@@ -19,7 +19,7 @@ namespace RaceLibrary
 
         //CONSTRUCTORS
 
-        public Hobbit(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, Weapon equippedWeapon, int sneak)
+        public Hobbit(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon, int sneak)
         : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon)
         {
             Sneak = sneak;
@@ -36,7 +36,7 @@ namespace RaceLibrary
             HitChance = 40;
             BlockChance = 60;
             BlockAmount = 15;
-            EquippedWeapon = ElvishDagger; //TO DO - WEAPONS LIBRARY
+            EquippedWeapon = null; //TO DO - WEAPONS LIBRARY
             //Sneak = Calc.Encounter -10; //TO DO - SNEAK MECHANIC
         }
 

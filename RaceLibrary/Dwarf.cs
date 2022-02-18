@@ -18,7 +18,7 @@ namespace RaceLibrary
 
         //CONSTRUCTORS
 
-        public Dwarf(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, Weapon equippedWeapon, int axeMaster)
+        public Dwarf(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon, int axeMaster)
         : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon)
         {
             AxeMaster = axeMaster;

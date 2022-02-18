@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterLibrary", "MonsterLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceLibrary", "RaceLibrary\RaceLibrary.csproj", "{59922728-47BE-42BA-9FDB-8713C93D2ADE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeaponsLibrary", "WeaponsLibrary\WeaponsLibrary.csproj", "{A75DCC77-125D-4E70-B71E-93F0CE0FAEED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{59922728-47BE-42BA-9FDB-8713C93D2ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59922728-47BE-42BA-9FDB-8713C93D2ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59922728-47BE-42BA-9FDB-8713C93D2ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75DCC77-125D-4E70-B71E-93F0CE0FAEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75DCC77-125D-4E70-B71E-93F0CE0FAEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75DCC77-125D-4E70-B71E-93F0CE0FAEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75DCC77-125D-4E70-B71E-93F0CE0FAEED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

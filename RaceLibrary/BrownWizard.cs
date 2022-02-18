@@ -18,7 +18,7 @@ namespace RaceLibrary
 
         //CONSTRUCTORS
 
-        public BrownWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, Weapon equippedWeapon, int crows)
+        public BrownWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon, int crows)
         : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon)
         {
             Crows = crows;
@@ -31,7 +31,7 @@ namespace RaceLibrary
             MaxLife = 90;
             Life = 90;
             MaxDamage = 40;
-            MinDamage = 30;
+            MinDamage = 20;
             HitChance = 70;
             BlockChance = 40;
             BlockAmount = 20;
