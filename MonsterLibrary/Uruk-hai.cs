@@ -27,7 +27,7 @@ namespace MonsterLibrary
 
         public Uruk_hai()
         {
-            Name = "Fiersome Uruk Hai";
+            Name = "Fearsome Uruk Hai";
             Description = ""; //TO DO - URUK HAI DESCRIPTION
             MaxLife = 70;
             Life = 70;

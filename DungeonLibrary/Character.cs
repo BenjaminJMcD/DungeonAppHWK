@@ -11,7 +11,6 @@ namespace DungeonLibrary
         //FIELDS
 
         private int _life;
-        private int _minDamage;
 
         //PROPERTIES
 
@@ -22,13 +21,13 @@ namespace DungeonLibrary
         public int HitChance { get; set; }
         public int BlockChance { get; set; }
         public int BlockAmount { get; set; }
-
+        public int MinDamage { get; set; }
         public int Life
         {
             get { return _life; }
             set
             {
-                if (value > 0 && value <= MaxDamage)
+                if (value <= MaxLife)
                 {
                     _life = value;
                 }
@@ -39,24 +38,30 @@ namespace DungeonLibrary
             }//end set
         }//end pub int
 
-        public int MinDamage
-        {
-            get { return _minDamage; }
-            set
-            {
-                if (value > 0 && value <= MaxDamage)
-                {
-                    _minDamage = value;
-                }
-                else
-                {
-                    _minDamage = 1;
-                }//end if
-            }//end set
-        }//end pub int
+
 
         //CONSTRUCTORS
 
         //METHODS
+
+        public virtual int CalcBlockAmount()
+        {
+            return BlockAmount;
+        }
+
+        public virtual int CalcBlockChance()
+        {
+            return BlockChance;
+        }
+
+        public virtual int CalcHitChance()
+        {
+            return HitChance;
+        }
+
+        public virtual int CalcDamage()
+        {
+            return 0;
+        }
     }
 }

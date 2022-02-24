@@ -27,13 +27,14 @@ namespace WeaponsLibrary
         public OrcArmor()
         {
             WeaponName = "A dead Orc's Armor";
-            MaxDamage = 30;
-            MinDamage = 10;
+            MaxDamage = 0;
+            MinDamage = 0;
             BonusHitChance = 10;
-            BonusBlockChance = 10;
+            BonusBlockChance = 20;
             BonusBlockAmount = 10;
             BonusSneak = 20;
         }
+
 
 
         //METHODS
@@ -41,7 +42,7 @@ namespace WeaponsLibrary
         public override string ToString()
         {
             return string.Format("{0}\nAdded...\n" +
-                "Damage: +{3}% chance for +{2} to +{1} damage\n" +
+                "Damage: +{3}% chance to hit\n" + 
                 "Block: +{4}% chance to block +{5}\n" +
                 "Evasion: +{6}%");
         }

@@ -11,8 +11,8 @@ namespace DungeonLibrary
         //FIELDS
         //Attributes: HitChance, BlockChance, BlockAmount, MaxDamage, MinDamage, MaxLife, Life, Name, Description
 
-        private int _life;
-        private int _minDamage;
+        //private int _life;
+        //private int _minDamage;
 
         //PROPERTIES  ****SEE CHARACTER       
 
@@ -37,20 +37,25 @@ namespace DungeonLibrary
 
         public override string ToString()
         {
-            return string.Format("\n*** FOE DETECTED ***\n" + "{0}\n{1}\n\n" + "Current Health: {2} / {3}\n" + "Damage: {4} to {5}\n" + "Armor: {6}% effective for {7} damage",
+            return string.Format("\n*** Enemy Info ***\n" + "{0}\n{1}\n\n" + "Current Health: {2} / {3}\n" + "Damage: {6}% chance to hit {4} to {5}\n" + "Armor: {7}% effective for {8} damage",
                 Name,
                 Description,
                 Life,
                 MaxLife,
                 MinDamage,
                 MaxDamage,
+                HitChance,
                 BlockChance,
                 BlockAmount);
 
-
         }
 
+        public override int CalcDamage()
+        {
+            Random rand = new Random();
+            return rand.Next(MinDamage, MaxDamage);
 
+        }
 
 
 

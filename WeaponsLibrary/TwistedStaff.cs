@@ -38,6 +38,8 @@ namespace WeaponsLibrary
         }
 
 
+
+
         //METHODS
 
         public override string ToString()

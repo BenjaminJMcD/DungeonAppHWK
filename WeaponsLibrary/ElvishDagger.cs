@@ -16,9 +16,7 @@ namespace WeaponsLibrary
         //CONSTRUCTORS
 
         public ElvishDagger(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount);
-
-        public ElvishDagger()
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount)
         {
             WeaponName = "A small elvish blade. Fit for a Hobbit";
             MaxDamage = 30;
@@ -28,6 +26,7 @@ namespace WeaponsLibrary
             BonusBlockAmount = 10;
         }
 
+        public ElvishDagger() { }
 
         //METHODS
     }

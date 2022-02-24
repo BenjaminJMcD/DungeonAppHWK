@@ -4,28 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DungeonLibrary;
+using WeaponsLibrary;
+
 
 namespace RaceLibrary
 {
     public class Elf : Player
     {
+
+        NoWeapon noweapon = new NoWeapon();
+
+
+
         //FIELDS
-        //Special Attribute: +20 to HitChance
+        //Special Attribute: High HitChance
+        public int KeenEye { get; set; }
 
         //PROPERTIES
 
-        public int KeenEye { get; set; }
-
         //CONSTRUCTORS
 
-        public Elf(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon)
-        : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon);
+        public Elf(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, WeaponsArmor equippedWeapon, int keenEye)
+        : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, equippedWeapon)
+        {
+            KeenEye = keenEye;
+        }
 
 
         public Elf()
         {
             Name = "Legolas";
-            Description = ""; //TO DO - LEGOLAS DESCRIPTION
+            Description = "An ageless Woodland Elf with a keen eye";
             MaxLife = 60;
             Life = 60;
             MaxDamage = 30;
@@ -33,11 +42,13 @@ namespace RaceLibrary
             HitChance = 90;
             BlockChance = 70;
             BlockAmount = 15;
-            EquippedWeapon = ElvishDagger; //TO DO - WEAPONS LIBRARY
+            EquippedWeapon = noweapon;
         }
+
 
         //METHODS
 
+        //CalcWeapon
 
     }
 }

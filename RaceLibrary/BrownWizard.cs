@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DungeonLibrary;
+using WeaponsLibrary;
 
 namespace RaceLibrary
 {
@@ -16,15 +17,18 @@ namespace RaceLibrary
 
         public int Crows { get; set; }
 
+        private WeaponsArmor twistedstaff = new TwistedStaff();
+        private WeaponsArmor noweapon = new NoWeapon();
+
         //CONSTRUCTORS
 
-        public BrownWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon, int crows)
-        : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon)
+        public BrownWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, WeaponsArmor equippedWeapon, int crows)
+        : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, equippedWeapon)
         {
             Crows = crows;
         }
 
-        public Hobbit()
+        public BrownWizard()
         {
             Name = "Radagast";
             Description = ""; //TO DO - Radagast DESCRIPTION
@@ -35,9 +39,11 @@ namespace RaceLibrary
             HitChance = 70;
             BlockChance = 40;
             BlockAmount = 20;
-            EquippedWeapon = TwistedStaff; //TO DO - WEAPONS LIBRARY
+            EquippedWeapon = noweapon; 
+            Crows = 10;
             //Crows = Calc.damage + 10;  TO DO - CROWS MECHANIC
         }
+
 
         //METHODS
     }

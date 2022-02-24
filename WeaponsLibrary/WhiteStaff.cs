@@ -17,9 +17,7 @@ namespace WeaponsLibrary
         //CONSTRUCTORS
 
         public WhiteStaff(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount);
-
-        public WhiteStaff()
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount)
         {
             WeaponName = "Shining a glorious, piercing light - the staff of Gandalf the White";
             MaxDamage = 20;
@@ -29,6 +27,7 @@ namespace WeaponsLibrary
             BonusBlockAmount = 10;
         }
 
+        public WhiteStaff() { }
 
         //METHODS
 

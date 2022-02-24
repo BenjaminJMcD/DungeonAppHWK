@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DungeonLibrary;
+using WeaponsLibrary;
 
 namespace RaceLibrary
 {
     public class WhiteWizard : Player
     {
+
+        WhiteStaff whitestaff = new WhiteStaff();
+        NoWeapon noweapon = new NoWeapon();
+
         //FIELDS
         //Special Attribute: -10 to opponent's HitChance
 
@@ -16,10 +21,11 @@ namespace RaceLibrary
 
         public int BlindingAura { get; set; }
 
+
         //CONSTRUCTORS
 
-        public WhiteWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, Race characterRace, WeaponsArmor equippedWeapon, int blindingAura)
-: base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, characterRace, equippedWeapon)
+        public WhiteWizard(string name, string description, int maxLife, int life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, WeaponsArmor equippedWeapon, int blindingAura)
+            : base(name, description, maxLife, life, maxDamage, minDamage, hitChance, blockChance, blockAmount, equippedWeapon)
         {
             BlindingAura = blindingAura;
         }
@@ -35,9 +41,11 @@ namespace RaceLibrary
             HitChance = 70;
             BlockChance = 40;
             BlockAmount = 20;
-            EquippedWeapon = WhiteStaff; //TO DO - WEAPONS LIBRARY
+            EquippedWeapon = whitestaff;
             BlindingAura = 80;
         }
+
+
 
         //METHODS
 

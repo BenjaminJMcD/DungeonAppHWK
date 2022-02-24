@@ -16,9 +16,7 @@ namespace WeaponsLibrary
         //CONSTRUCTORS
 
         public Axe(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount);
-
-        public Axe()
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount)
         {
             WeaponName = "Sturdy Axe";
             MaxDamage = 20;
@@ -28,7 +26,7 @@ namespace WeaponsLibrary
             BonusBlockAmount = 10;
         }
 
-
+        public Axe() { }
         //METHODS
     }
 }

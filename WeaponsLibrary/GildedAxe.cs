@@ -16,9 +16,7 @@ namespace WeaponsLibrary
         //CONSTRUCTORS
 
         public GildedAxe(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount);
-
-        public GildedBlade()
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount)
         {
             WeaponName = "A gilded human axe of very nice craftmanship";
             MaxDamage = 35;
@@ -28,6 +26,7 @@ namespace WeaponsLibrary
             BonusBlockAmount = 10;
         }
 
+        public GildedAxe() { }
 
         //METHODS
     }

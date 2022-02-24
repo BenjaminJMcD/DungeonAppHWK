@@ -16,9 +16,7 @@ namespace WeaponsLibrary
         //CONSTRUCTORS
 
         public DwarvenAxe(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount);
-
-        public DwarvenAxe()
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount)
         {
             WeaponName = "Forged by Master Dwarves, Gimli's Double-Bladed Axe";
             MaxDamage = 25;
@@ -28,6 +26,7 @@ namespace WeaponsLibrary
             BonusBlockAmount = 20;
         }
 
+        public DwarvenAxe() { }
 
         //METHODS
     }

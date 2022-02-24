@@ -47,12 +47,17 @@
     <Compile Include="Hobbit.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Race.cs" />
     <Compile Include="WhiteWizard.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DungeonLibrary\DungeonLibrary.csproj">
       <Project>{bd3d5f11-d6eb-44f7-9c0e-56c91d5a4c35}</Project>
       <Name>DungeonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeaponsLibrary\WeaponsLibrary.csproj">
+      <Project>{a75dcc77-125d-4e70-b71e-93f0ce0faeed}</Project>
+      <Name>WeaponsLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

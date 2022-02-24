@@ -28,7 +28,7 @@ namespace MonsterLibrary
         public Shelob()
         {
             Name = "Shelob";
-            Description = ""; //TO DO - SHELOB DESCRIPTION
+            Description = "A Giant wretched spider!!  ... Its movements are too fast to be seen.";
             MaxLife = 50;
             Life = 50;
             MaxDamage = 10;

@@ -49,6 +49,7 @@
     <Compile Include="Galadhrim.cs" />
     <Compile Include="GildedAxe.cs" />
     <Compile Include="GildedBlade.cs" />
+    <Compile Include="NoWeapon.cs" />
     <Compile Include="OrcArmor.cs" />
     <Compile Include="TwistedStaff.cs" />
     <Compile Include="WhiteStaff.cs" />

@@ -74,6 +74,8 @@ namespace DungeonLibrary
             BonusBlockAmount = bonusBlockAmount;
         }
 
+        public WeaponsArmor() { }
+
         //METHODS
 
         public override string ToString()

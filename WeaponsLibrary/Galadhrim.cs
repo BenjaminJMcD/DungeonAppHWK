@@ -15,10 +15,8 @@ namespace WeaponsLibrary
 
         //CONSTRUCTORS
 
-        public Galadhrim(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount);
-
-        public Galadhrim()
+         public Galadhrim(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance,  bonusBlockAmount)
         {
             WeaponName = "Bestowed to Legolas by Galadriel... his mighty bow, Galadhrim";
             MaxDamage = 40;
@@ -28,6 +26,7 @@ namespace WeaponsLibrary
             BonusBlockAmount = 10;
         }
 
+        public Galadhrim() { }
 
         //METHODS
     }
