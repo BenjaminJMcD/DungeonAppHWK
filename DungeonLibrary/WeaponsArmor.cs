@@ -80,12 +80,12 @@ namespace DungeonLibrary
 
         public override string ToString()
         {
-            return string.Format("{0}\n{1} to {2} Damage\n" +
+            return string.Format("\n{0}\n{1} to {2} Damage\n" +
                 "Bonus HitChance: +{3}%\n" +
                 "Bonus BlockChance: +{4}% for +{5} Damage",
                 WeaponName,
-                MaxDamage,
                 MinDamage,
+                MaxDamage,
                 BonusHitChance,
                 BonusBlockChance,
                 BonusBlockAmount);

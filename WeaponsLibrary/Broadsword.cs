@@ -16,7 +16,9 @@ namespace WeaponsLibrary
         //CONSTRUCTORS
 
         public Broadsword(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount)
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount) { }
+        
+        public Broadsword()
         {
             WeaponName = "Broadsword";
             MaxDamage = 15;
@@ -26,10 +28,6 @@ namespace WeaponsLibrary
             BonusBlockAmount = 10;
         }
 
-        public Broadsword()
-        {
-
-        }
 
         //METHODS
     }

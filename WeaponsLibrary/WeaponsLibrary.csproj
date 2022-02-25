@@ -51,6 +51,7 @@
     <Compile Include="GildedBlade.cs" />
     <Compile Include="NoWeapon.cs" />
     <Compile Include="OrcArmor.cs" />
+    <Compile Include="Sting.cs" />
     <Compile Include="TwistedStaff.cs" />
     <Compile Include="WhiteStaff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

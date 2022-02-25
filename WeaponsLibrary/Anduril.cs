@@ -16,7 +16,9 @@ namespace WeaponsLibrary
         //CONSTRUCTORS
 
         public Anduril(string weaponName, int maxDamage, int minDamage, int bonusHitChance, int bonusBlockChance, int bonusBlockAmount)
-        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount)
+        : base(weaponName, maxDamage, minDamage, bonusHitChance, bonusBlockChance, bonusBlockAmount) { }
+
+        public Anduril()
         {
             WeaponName = "Reforged from the shards of Narsil - Anduril";
             MaxDamage = 30;
@@ -26,7 +28,6 @@ namespace WeaponsLibrary
             BonusBlockAmount = 10;
         }
 
-        public Anduril() { }
 
         //METHODS
 

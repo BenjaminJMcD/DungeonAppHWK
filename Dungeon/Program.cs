@@ -373,12 +373,11 @@ namespace Dungeon
                                 next = true;
                                 break;
 
-                            case ConsoleKey.P:  //AnyKey crashes console
-                                Console.Clear();
+                            case ConsoleKey.P:  //AnyKey crashes console'
+
                                 Console.WriteLine(player);
-                                Console.WriteLine("\n\nPress any key to return to Menu");
-                                next = false;
-                                return;
+                                Console.WriteLine("\n\nScore = " + score);
+                                break;
 
                             case ConsoleKey.X:
                                 exit = true;
@@ -388,13 +387,17 @@ namespace Dungeon
                     } while (!next);
                 }//end if
 
-            if (diceRoll > 50)  //STUCK. P does NOTHING
+            if (diceRoll > 50)
             {
+                    OrcArmor orcArmor = new OrcArmor();
+                    GildedBlade gildedBlade = new GildedBlade();
+                    Sting sting = new Sting();
+
                 bool noenemy = true;
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("There is still a bit of light from the entrance... What shall you do?\n\n" +
+                    Console.WriteLine("\nThere is still a bit of light from the entrance... What shall you do?\n\n" +
                         "P) Player Stats\n" +
                         "S) Search Area\n" +
                         "C) Continue Onward\n" +
@@ -404,29 +407,89 @@ namespace Dungeon
                     switch (stillness)
                     {
                         case ConsoleKey.P:
+
                             Console.WriteLine(player);
-                            Console.WriteLine("\n\nPress any key to return to menu");
-                            noenemy = true;
+                            Console.WriteLine("\nScore = " + score);
+
                             break;
+
                         case ConsoleKey.C:
                             noenemy = false;
                             break;
-                        //case ConsoleKey.S:
-                        //            Random dice = new Random();
-                        //            int roll = dice.Next(1, 101);
-                        //       if (roll <= 30)
-                        //        {
-                        //            Console.WriteLine(" You've discovered\n\n" EquippedWeapon() "\n\n...on one of the corpses! Equip?");    //TODO - BUILD RANDOM WEAPON PICKUP
-                        //        }
-                        //    break;
+
+                        case ConsoleKey.S:
+
+                            Random rand1 = new Random();
+                            int roll = rand1.Next(1, 101);
+                                if (roll <= 30)
+                                {
+                                    Console.WriteLine("\nYou've discovered\n" + orcArmor + "\nwould you like to equip? Y/N");
+                                    ConsoleKey orcarmor = Console.ReadKey(true).Key;
+                                    switch (orcarmor)
+                                    {
+                                        case ConsoleKey.Y:
+                                        player.EquippedWeapon = orcArmor;
+                                            Console.WriteLine("\n" + player + "\n");
+                                            Console.WriteLine(player.EquippedWeapon);
+                                        noenemy = false;
+                                    break;
+
+                                        default:
+                                        noenemy = false;
+                                    break;
+                                    }
+                                }
+                                if (roll > 30 && roll <= 60)
+                                {
+                                    Console.WriteLine("\nYou've discovered\n" + gildedBlade + "would you like to equip? Y/N");
+                                    ConsoleKey gildedblade = Console.ReadKey(true).Key;
+                                    switch (gildedblade)
+                                    {
+                                        case ConsoleKey.Y:
+                                            player.EquippedWeapon = gildedBlade;
+                                            Console.WriteLine("\n" + player + "\n");
+                                            Console.WriteLine(player.EquippedWeapon);
+                                            noenemy = false;
+                                            break;
+
+                                        default:
+                                            noenemy = false;
+                                            break;
+                                    }
+                                }
+                                if (dice > 60 && dice <= 90)
+                                {
+                                    Console.WriteLine("You find nothing of use");
+                                    noenemy = false;
+                                }
+                                if (dice > 90)
+                                {
+                                    Console.WriteLine("\nYou've discovered\n" + orcArmor + "would you like to equip? Y/N");
+                                    ConsoleKey stingblade = Console.ReadKey(true).Key;
+                                    switch (stingblade)
+                                    {
+                                        case ConsoleKey.Y:
+                                            player.EquippedWeapon = sting;
+                                            Console.WriteLine("\n" + player + "\n");
+                                            Console.WriteLine(player.EquippedWeapon);
+                                            noenemy = false;
+                                            break;
+
+                                        default:
+                                            noenemy = false;
+                                            break;
+                                    }
+                                }
+                                break;
 
                         default:
-                            Console.WriteLine("Try again, laddy");
+                            Console.WriteLine("Once More, laddy!");
                             noenemy = true;
                             break;
                     }
                 } while (noenemy);
             }
+                
 
             Console.WriteLine("\nLEVEL ONE - MYSTERIOUS CAVE\n" +
             "The air is thick and putrid. Things are so dark now. We need to be careful");
@@ -861,6 +924,14 @@ namespace Dungeon
                 Console.Clear();
 
             Console.WriteLine();
+
+        // ENTER MORDOR --- 4 stages. 40% Orc 25% Olog-hai 5% MouthofSauron 
+        //                  30% Chance to Search
+        //                  25% GildedBlade 25% Broadsword 25% OrcArmor 25% Nothing
+
+        //ENTER TOWER --- 4 stages. 50% Orc 30% Uruk-Hai 20% Chance to Search
+        //                  10% ElvishDagger, 15% GildedAxe, 15% GildedBlade
+        //                  15% OrcArmor, 20% Axe, 15% Broadsword, 10% Nothing
 
 
 

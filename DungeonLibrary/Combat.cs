@@ -20,7 +20,7 @@ namespace DungeonLibrary
                 int damageDealt = attacker.CalcDamage() - defender.CalcBlockAmount();
                 defender.Life -= damageDealt;
 
-                Console.Clear();
+                //Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("{0} was blocked for {1} damage! But still managed {2}",
                     attacker.Name, defender.CalcBlockAmount(), damageDealt);

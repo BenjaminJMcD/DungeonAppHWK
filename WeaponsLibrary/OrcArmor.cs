@@ -7,7 +7,7 @@ using DungeonLibrary;
 
 namespace WeaponsLibrary
 {
-    class OrcArmor : WeaponsArmor
+    public class OrcArmor : WeaponsArmor
     {
         //FIELDS
         //Special Attribute: decrease encounter rate by 20%
@@ -27,8 +27,8 @@ namespace WeaponsLibrary
         public OrcArmor()
         {
             WeaponName = "A dead Orc's Armor";
-            MaxDamage = 0;
-            MinDamage = 0;
+            MaxDamage = 1;
+            MinDamage = 1;
             BonusHitChance = 10;
             BonusBlockChance = 20;
             BonusBlockAmount = 10;
@@ -42,9 +42,9 @@ namespace WeaponsLibrary
         public override string ToString()
         {
             return string.Format("{0}\nAdded...\n" +
-                "Damage: +{3}% chance to hit\n" + 
-                "Block: +{4}% chance to block +{5}\n" +
-                "Evasion: +{6}%");
+                "Damage: +{3}% chance to hit\n" +
+                "Block: +{4}% chance to block +{5}\n"); 
+                //+ "Evasion: +{4}%"
         }
     }
 }

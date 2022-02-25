@@ -55,12 +55,12 @@ namespace DungeonLibrary
 
         public override int CalcBlockChance()
         {
-            return base.BlockChance + EquippedWeapon.BonusBlockChance;
+            return BlockChance + EquippedWeapon.BonusBlockChance;
         }
 
         public override int CalcBlockAmount()
         {
-            return base.BlockAmount + EquippedWeapon.BonusBlockAmount;
+            return BlockAmount + EquippedWeapon.BonusBlockAmount;
         }
 
         public override int CalcDamage()
