@@ -7,7 +7,7 @@ using DungeonLibrary;
 
 namespace MonsterLibrary
 {
-    public class Uruk_hai : Monster
+    public class Uruk_Hai : Monster
     {
         //FIELDS
         //Special Attribute: 20% Chance Critical (2x) Damage
@@ -19,13 +19,13 @@ namespace MonsterLibrary
 
         //CONSTRUCTORS
 
-        public Uruk_hai(string name, string description, int maxLife, int Life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, int critical)
+        public Uruk_Hai(string name, string description, int maxLife, int Life, int maxDamage, int minDamage, int hitChance, int blockChance, int blockAmount, int critical)
             : base(name, description, maxLife, Life, maxDamage, minDamage, hitChance, blockChance, blockAmount)
         {
             Crit = critical;
         }
 
-        public Uruk_hai()
+        public Uruk_Hai()
         {
             Name = "Fearsome Uruk Hai";
             Description = ""; //TO DO - URUK HAI DESCRIPTION

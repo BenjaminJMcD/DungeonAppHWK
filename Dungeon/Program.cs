@@ -24,11 +24,13 @@ namespace Dungeon
 
             do
             {
-
+            //FIRST MENU - CHOOSE CHARACTER    
+            
                 Console.Title = "****Infiltrate Mordor!****";
 
                 Console.WriteLine("\n\n\n\nAs Sauron's forces begin to grow stronger and mobilize, the few remaining from the fellowship of 9 await their chance to confront Mordor as their last stand. After discussion, it is decided that a warrior should be sent to aid Frodo and Sam... or to finish what they were sent out to do.");
 
+                //PLAYER LIBRARY
                 NoWeapon noweapon = new NoWeapon();
                 Hobbit hobbit = new Hobbit();
                 Dwarf dwarf = new Dwarf();
@@ -36,6 +38,26 @@ namespace Dungeon
                 Elf elf = new Elf();
                 BrownWizard brownwizard = new BrownWizard();
                 WhiteWizard whitewizard = new WhiteWizard();
+
+                //MONSTER LIBRARY
+                Shelob shelob = new Shelob();
+                Orc halfdeadOrc = new Orc("Half-dead Orc", "The creature is confused and in panic. Nearly all life has left its eyes...", 50, 15, 15, 1, 40, 1, 5, 20);
+                Orc orc = new Orc();
+                Olog_Hai olog = new Olog_Hai();
+                Uruk_Hai uruk = new Uruk_Hai();
+                MouthOfSauron mouth = new MouthOfSauron();
+                Wraith wraith = new Wraith();
+
+                //WEAPONS LIBRARY
+                Anduril anduril = new Anduril();
+                Axe axe = new Axe();
+                Broadsword broadsword = new Broadsword();
+                DwarvenAxe dwarvenaxe = new DwarvenAxe();
+                ElvishDagger elvishdagger = new ElvishDagger();
+                Galadhrim
+
+
+
 
                 bool begin = false;
                 do
@@ -222,6 +244,8 @@ namespace Dungeon
                 bool frodo = false;
                 do
                 {
+                //Intro to LEVEL ONE - Chance to exit
+
 
                     Console.WriteLine("Are you brave enough to enter ?\n\n" +
                         "Y) Yes...\n" +
@@ -249,8 +273,9 @@ namespace Dungeon
                 } while (!frodo && !exit);
             if (exit) break;
 
-            Shelob shelob = new Shelob();
-            Orc halfdeadOrc = new Orc("Half-dead Orc", "The creature is confused and in panic. Nearly all life has left its eyes...", 50, 15, 15, 1, 40, 1, 5, 20);
+
+            //LEVEL ONE STAGE ONE
+
 
             Console.WriteLine("\nLEVEL ONE - MYSTERIOUS CAVE\n\n" +
                     "There is still some light from the opening.. but this cave has no end in sight");
@@ -491,6 +516,8 @@ namespace Dungeon
             }
                 
 
+            //LEVEL ONE STAGE 2
+
             Console.WriteLine("\nLEVEL ONE - MYSTERIOUS CAVE\n" +
             "The air is thick and putrid. Things are so dark now. We need to be careful");
 
@@ -528,14 +555,14 @@ namespace Dungeon
                         }
                         else
                         {
-                            Console.WriteLine("The cursed creature retreated to the               darkness!");
+                            Console.WriteLine("The cursed creature retreated to the darkness!");
                         }
                         break;
 
                     case ConsoleKey.R:
                         Console.WriteLine("You run deeper into the cave to hide!");
                         Combat.DoAttack(shelob, player);
-                        Console.WriteLine("'Vile creature!' You are stabbed as you          run away");
+                        Console.WriteLine("'Vile creature!' You are stabbed as you run away");
                         break;
                     default:
                         Console.WriteLine("Try again!");
@@ -598,6 +625,10 @@ namespace Dungeon
             }
             if (diceRoll > 50)
                 Console.Clear();
+
+            
+            //LEVEL ONE Stage 3
+
 
             Console.WriteLine("\nLEVEL ONE - MYSTERIOUS CAVE\n" +
             "There may be some light at the end of this pathway!");

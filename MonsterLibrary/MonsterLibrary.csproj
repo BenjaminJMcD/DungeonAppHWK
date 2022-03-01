@@ -42,12 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MouthOfSauron.cs" />
-    <Compile Include="Olog-Hai.cs" />
+    <Compile Include="Olog_Hai.cs" />
     <Compile Include="Orc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SauronNecromancyForm.cs" />
     <Compile Include="Shelob.cs" />
-    <Compile Include="Uruk-hai.cs" />
+    <Compile Include="Uruk_Hai.cs" />
     <Compile Include="Wraith.cs" />
   </ItemGroup>
   <ItemGroup>
